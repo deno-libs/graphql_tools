@@ -2,7 +2,9 @@
 
 [![GitHub release (latest by date)][releases]][releases-page] [![][docs-badge]][docs]
 
-Deno port of `graphql-tools` library. Code is extracted from [oak_graphql](https://deno.land/x/oak_graphql@0.6.2/graphql-tools).
+> Deno port of [graphql-tools](https://github.com/ardatan/graphql-tools/blob/master/packages/graphql-tools) library.
+
+Useful tools to create and manipulate GraphQL schemas. Code is extracted from [oak_graphql](https://deno.land/x/oak_graphql@0.6.2/graphql-tools).
 
 ## Example
 
