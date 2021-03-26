@@ -30,19 +30,13 @@ const app = GraphQLHTTP({ schema, graphiql: true })
 
 const s = serve({ port: 3000 })
 
-for await (const req of s) {
-  app(req)
-}
+for await (const req of s) app(req)
 ```
 
 [releases]: https://img.shields.io/github/v/release/deno-libs/graphql_tools?style=flat-square
 [docs-badge]: https://img.shields.io/github/v/release/deno-libs/graphql_tools?color=yellow&label=Documentation&logo=deno&style=flat-square
-[docs]: https://doc.deno.land/https/deno.land/x/graphql_tag/mod.ts
+[docs]: https://doc.deno.land/https/deno.land/x/graphql_tag/schema/index.ts
 [releases-page]: https://github.com/deno-libs/graphql_tools/releases
-[gh-actions-img]: https://img.shields.io/github/workflow/status/deno-libs/graphql_tools/CI?style=flat-square
-[codecov]: https://codecov.io/gh/deno-libs/graphql_tools
-[github-actions]: https://github.com/deno-libs/graphql_tools/actions
-[codecov-badge]: https://img.shields.io/codecov/c/gh/deno-libs/graphql_tools?style=flat-square
 
 ## Donate
 
