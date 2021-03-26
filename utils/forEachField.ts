@@ -1,6 +1,6 @@
 import { getNamedType, isObjectType } from '../deps.ts'
 
-import type { IFieldIteratorFn } from './Interfaces.ts'
+import type { IFieldIteratorFn } from './interfaces.ts'
 
 export function forEachField(schema: any, fn: IFieldIteratorFn): void {
   const typeMap = schema.getTypeMap()

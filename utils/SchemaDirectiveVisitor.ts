@@ -1,6 +1,5 @@
 import { valueFromASTUntyped } from '../deps.ts'
-import { getArgumentValues } from './getArgumentValues.ts'
-import { SchemaVisitor, VisitableSchemaType, visitSchema } from './index.ts'
+import { SchemaVisitor, VisitableSchemaType, visitSchema, getArgumentValues } from './index.ts'
 
 /** This class represents a reusable implementation of a @directive that may
 appear in a GraphQL schema written in Schema Definition Language.
