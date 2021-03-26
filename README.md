@@ -35,7 +35,7 @@ for await (const req of s) app(req)
 
 [releases]: https://img.shields.io/github/v/release/deno-libs/graphql_tools?style=flat-square
 [docs-badge]: https://img.shields.io/github/v/release/deno-libs/graphql_tools?color=yellow&label=Documentation&logo=deno&style=flat-square
-[docs]: https://doc.deno.land/https/deno.land/x/graphql_tag/schema/index.ts
+[docs]: https://doc.deno.land/https/deno.land/x/graphql_tools/mod.ts
 [releases-page]: https://github.com/deno-libs/graphql_tools/releases
 
 ## Donate
