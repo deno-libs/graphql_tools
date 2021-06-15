@@ -1,7 +1,7 @@
-import { serve } from 'https://deno.land/std/http/mod.ts'
+import { serve } from 'https://deno.land/std@0.99.0/http/server.ts'
 import { makeExecutableSchema } from './mod.ts'
-import { GraphQLHTTP } from 'https://deno.land/x/gql/mod.ts'
-import { gql } from 'https://deno.land/x/graphql_tag/mod.ts'
+import { GraphQLHTTP } from 'https://deno.land/x/gql@0.1.3/mod.ts'
+import { gql } from 'https://deno.land/x/graphql_tag@0.0.1/mod.ts'
 
 const typeDefs = gql`
   type Query {
