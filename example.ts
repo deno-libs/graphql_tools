@@ -1,6 +1,6 @@
-import { serve } from 'https://deno.land/std@0.106.0/http/server.ts'
+import { serve } from 'https://deno.land/std@0.167.0/http/server.ts'
 import { makeExecutableSchema } from './mod.ts'
-import { GraphQLHTTP } from 'https://deno.land/x/gql@0.2.2/mod.ts'
+import { GraphQLHTTP } from 'https://deno.land/x/gql@1.1.2/mod.ts'
 import { gql } from 'https://deno.land/x/graphql_tag@0.0.1/mod.ts'
 
 const typeDefs = gql`
@@ -17,10 +17,4 @@ const resolvers = {
 
 const schema = makeExecutableSchema({ typeDefs, resolvers })
 
-const app = GraphQLHTTP({ schema, graphiql: true })
-
-const s = serve({ port: 3000 })
-
-for await (const req of s) {
-  app(req)
-}
+await serve(GraphQLHTTP({ schema, graphiql: true }), { port: 3000 })

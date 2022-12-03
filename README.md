@@ -9,10 +9,10 @@ Useful tools to create and manipulate GraphQL schemas. Code is extracted from [o
 ## Example
 
 ```ts
-import { serve } from 'https://deno.land/std/http/mod.ts'
-import { makeExecutableSchema } from 'https://deno.land/graphql_tools/mod.ts'
-import { GraphQLHTTP } from 'https://deno.land/x/gql/mod.ts'
-import { gql } from 'https://deno.land/x/graphql_tag/mod.ts'
+import { serve } from 'https://deno.land/std@0.167.0/http/server.ts'
+import { makeExecutableSchema } from 'https://deno.land/x/graphql_tools/mod.ts'
+import { GraphQLHTTP } from 'https://deno.land/x/gql@1.1.2/mod.ts'
+import { gql } from 'https://deno.land/x/graphql_tag@0.0.1/mod.ts'
 
 const typeDefs = gql`
   type Query {
@@ -28,11 +28,7 @@ const resolvers = {
 
 const schema = makeExecutableSchema({ typeDefs, resolvers })
 
-const app = GraphQLHTTP({ schema, graphiql: true })
-
-const s = serve({ port: 3000 })
-
-for await (const req of s) app(req)
+await serve(GraphQLHTTP({ schema, graphiql: true }), { port: 3000 })
 ```
 
 [releases]: https://img.shields.io/github/v/release/deno-libs/graphql_tools?style=flat-square
