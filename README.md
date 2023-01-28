@@ -2,17 +2,15 @@
 
 [![GitHub release (latest by date)][releases]][releases-page] [![][docs-badge]][docs]
 
-> Deno port of [graphql-tools](https://github.com/ardatan/graphql-tools/blob/master/packages/graphql-tools) library.
-
-Useful tools to create and manipulate GraphQL schemas. Code is extracted from [oak_graphql](https://deno.land/x/oak_graphql@0.6.2/graphql-tools).
+**DEPRECATED!** Use `https://esm.sh/@graphql-tools/schema` instead.
 
 ## Example
 
 ```ts
 import { serve } from 'https://deno.land/std@0.167.0/http/server.ts'
-import { makeExecutableSchema } from 'https://deno.land/x/graphql_tools/mod.ts'
-import { GraphQLHTTP } from 'https://deno.land/x/gql@1.1.2/mod.ts'
-import { gql } from 'https://deno.land/x/graphql_tag@0.0.1/mod.ts'
+import { makeExecutableSchema } from 'https://esm.sh/@graphql-tools/schema'
+import { GraphQLHTTP } from 'https://deno.land/x/gql@1.2.0/mod.ts'
+import { gql } from 'https://deno.land/x/graphql_tag@0.1.0/mod.ts'
 
 const typeDefs = gql`
   type Query {
